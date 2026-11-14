@@ -124,10 +124,22 @@ function track(name, type) {
 }
 function trackGame(num) { const g = games.find(x => x.number === num); if (g) track(g.name, "single"); }
 function renderFooter() {
- const L = [["instagram","📸 Instagram"],["tiktok","🎵 TikTok"],["facebook","👍 Facebook"],["channel","📢 WhatsApp Channel"]]
-  .filter(([k]) => SOCIAL[k]);
- $("siteFooter").innerHTML = L.length ? `<h4>${FOLLOW[lang]}</h4>` +
-  L.map(([k, n]) => `<a href="${esc(SOCIAL[k])}" target="_blank" rel="noopener">${n}</a>`).join("") : "";
+ const S = (d, f) => `<svg viewBox="0 0 24 24" ${f ? 'fill="currentColor"' : 'fill="none" stroke="currentColor" stroke-width="2"'}>${d}</svg>`;
+ const I = {
+  ig: S('<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>'),
+  tt: S('<path d="M16.6 2h-3.2v13.2a2.8 2.8 0 1 1-2.8-2.8c.3 0 .6 0 .8.1V9.2a6 6 0 1 0 5.2 5.9V8.6a7 7 0 0 0 4 1.3V6.7a4 4 0 0 1-4-4.7z"/>', 1),
+  fb: S('<path d="M14 8V6.5c0-.8.2-1.2 1.3-1.2H17V2h-2.7C11.4 2 10 3.7 10 6.2V8H7.5v3.3H10V22h4V11.3h2.7L17 8z"/>', 1),
+  wa: S('<path d="M21 12a9 9 0 0 1-13.4 7.8L3 21l1.3-4.4A9 9 0 1 1 21 12z"/>')
+ };
+ const L = [["instagram","ig","Instagram"],["tiktok","tt","TikTok"],["facebook","fb","Facebook"],["channel","wa","WhatsApp Channel"]]
+  .filter(([k]) => SOCIAL[k]).map(([k, c, n]) => `<a class="${c}" href="${esc(SOCIAL[k])}" target="_blank" rel="noopener">${I[c]}<span>${n}</span></a>`);
+ L.unshift(`<a class="wa" href="https://wa.me/${WA}" target="_blank" rel="noopener">${I.wa}<span dir="ltr">${PHONE}</span></a>`);
+ $("siteFooter").innerHTML = `<div class="sf-inner">
+  <div class="sf-brand">STORE DAKHLA<small>${t().tag}</small></div>
+  <div class="sf-title">${FOLLOW[lang]}</div>
+  <div class="sf-links">${L.join("")}</div>
+  <div class="sf-copy">© ${new Date().getFullYear()} STORE DAKHLA</div>
+ </div>`;
 }
 
 let lang = "ar", genre = "";
