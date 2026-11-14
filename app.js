@@ -78,7 +78,7 @@ function prepare() {
 
 /* ===== الإعدادات (املأ الروابط هنا) ===== */
 const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS1iNjNkLvAlNWYkow4Mgp1JR0Aa2wzTQknY5UT-krJFQgaHMaccc4-_NZ1n8IhHqUe_SiUaNreSef_/pub?gid=1519606279&single=true&output=csv";   // رابط Google Sheet المنشور بصيغة CSV (اتركه فارغًا لاستعمال Scripte.js)
-const TRACK_URL = "";       // رابط Google Apps Script لتسجيل نقرات الطلب
+const TRACK_URL = "https://script.google.com/macros/s/AKfycbx1HyGIfUU9FPjN5TvlV8Os5D0APfvTZxDZrHU5ZdakdiXI6MfadzsfyOPsxTFUAMfr/exec";       // رابط Google Apps Script لتسجيل نقرات الطلب
 const SOCIAL = { instagram: "https://www.instagram.com/storedakhla0/", tiktok: "https://www.tiktok.com/@storedakhla", facebook: "https://www.facebook.com/StoreDakhla2", channel: "" };  // روابط حساباتك
 const TOP = {ar:"🔥 الأكثر طلبًا", fr:"🔥 Les plus demandés", en:"🔥 Most requested"};
 const FOLLOW = {ar:"تابعنا", fr:"Suivez-nous", en:"Follow us"};
