@@ -291,7 +291,7 @@ function buildChips() {
 
 /* ===== آراء الزبائن ===== */
 const PUBLIC_URL = "https://ysf1988.github.io/store-dakhla-catalogue/";
-const IG_URL = "https://www.instagram.com/";  // ← ضع رابط حساب المتجر على إنستغرام
+const IG_URL = "https://www.instagram.com/storedakhla0";  // ← ضع رابط حساب المتجر على إنستغرام
 const REVIEWS = [ /* أضف الآراء المعتمدة هنا: {name:"محمد", stars:5, text:"خدمة ممتازة وتثبيت سريع"}, */ ];
 const FB_LOCALE = {ar:"ar_AR", fr:"fr_FR", en:"en_US"};
 const REV = {
