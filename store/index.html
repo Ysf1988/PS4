@@ -56,6 +56,20 @@
     .offer h2{margin:0 0 7px;font-size:2rem}
     .offer p{margin:0;color:#e0edff}
     .offer .btn{background:white;color:#0645a0;box-shadow:none;white-space:nowrap}
+
+    .drive-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:900px;margin:auto}
+    .drive-card{position:relative;overflow:hidden;background:linear-gradient(145deg,#10244a,#081329);border:1px solid #168cff77;border-radius:22px;padding:26px;box-shadow:0 14px 40px #00143b88}
+    .drive-card.featured{border-color:#16b7ff;box-shadow:0 0 30px #087cff25,0 14px 40px #00143b88}
+    .drive-card h3{font-size:1.35rem;margin:0 0 4px}
+    .drive-card .capacity{color:#91caff;font-weight:800}
+    .drive-price{font-size:2.8rem;font-weight:900;color:#fff;line-height:1.3;margin:12px 0}
+    .drive-price small{font-size:1rem;color:#9bcaff}
+    .drive-card ul{padding:0 20px 0 0;color:var(--muted);margin:14px 0 22px}
+    .drive-card li{margin:5px 0}
+    .drive-card .btn{width:100%}
+    .drive-note{text-align:center;color:var(--muted);font-size:.9rem;margin:20px auto 0;max-width:780px}
+    @media(max-width:650px){.drive-grid{grid-template-columns:1fr}.drive-card{padding:22px}}
+
     .faq{max-width:850px;margin:auto;display:grid;gap:12px}
     .faq-item h3{font-size:1rem;margin:0 0 6px}
     .faq-item p{margin:0;color:var(--muted);font-size:.94rem}
@@ -70,7 +84,7 @@
   <header class="container nav">
     <a class="brand" href="#">STORE <span>DAKHLA</span></a>
     <nav class="nav-links">
-      <a href="#features" data-i18n="navFeatures">مميزات الخدمة</a><a href="https://ysf1988.github.io/PS4/#first" data-i18n="navGames">ألعاب مقترحة</a><a href="#faq" data-i18n="navFaq">الأسئلة الشائعة</a>
+      <a href="#features" data-i18n="navFeatures">مميزات الخدمة</a><a href="https://ysf1988.github.io/PS4/#first" data-i18n="navGames">ألعاب مقترحة</a><a href="#external-drive" data-i18n="navDrive">ديسك خارجي</a><a href="#faq" data-i18n="navFaq">الأسئلة الشائعة</a>
     </nav>
     <div class="lang-switch" aria-label="Language"><button type="button" class="active" data-lang="ar">AR</button><button type="button" data-lang="fr">FR</button></div>
     <a class="btn" data-i18n="navOrder" href="https://wa.me/212777497771?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%B3%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%AA%D8%AB%D8%A8%D9%8A%D8%AA%20%D8%A3%D9%84%D8%B9%D8%A7%D8%A8%20PS4">اطلب عبر واتساب</a>
@@ -118,6 +132,40 @@
       </div>
     </section>
 
+    <section class="section" id="external-drive">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="driveTitle">ديسك خارجي معبأ بالألعاب</h2>
+          <p data-i18n="driveDesc">اختار السعة المناسبة ليك، وانت اختار الألعاب اللي بغيتي تكون فالديسك</p>
+        </div>
+        <div class="drive-grid">
+          <article class="drive-card">
+            <h3 data-i18n="drive500Title">ديسك خارجي 500GB</h3>
+            <div class="capacity" data-i18n="drive500Capacity">500 جيجا مع الألعاب</div>
+            <div class="drive-price">550 <small>DH</small></div>
+            <ul>
+              <li data-i18n="drive500Line1">ديسك خارجي بسعة 500GB</li>
+              <li data-i18n="driveGamesLine">اختيار الألعاب حسب رغبتك</li>
+              <li data-i18n="driveCheckLine">تأكيد توفر الألعاب والمساحة قبل التجهيز</li>
+            </ul>
+            <a class="btn" href="https://wa.me/212777497771?text=Salam%2C%20bghit%20disque%20dur%20externe%20500GB%20avec%20les%20jeux%20au%20prix%20de%20550%20DH.%20Je%20veux%20choisir%20les%20jeux." data-i18n="drive500Button">اطلب 500GB عبر واتساب</a>
+          </article>
+          <article class="drive-card featured">
+            <h3 data-i18n="drive1TTitle">ديسك خارجي 1TB</h3>
+            <div class="capacity" data-i18n="drive1TCapacity">1 تيرا مع الألعاب</div>
+            <div class="drive-price">800 <small>DH</small></div>
+            <ul>
+              <li data-i18n="drive1TLine1">ديسك خارجي بسعة 1TB</li>
+              <li data-i18n="driveGamesLine">اختيار الألعاب حسب رغبتك</li>
+              <li data-i18n="driveCheckLine">تأكيد توفر الألعاب والمساحة قبل التجهيز</li>
+            </ul>
+            <a class="btn" href="https://wa.me/212777497771?text=Salam%2C%20bghit%20disque%20dur%20externe%201TB%20avec%20les%20jeux%20au%20prix%20de%20800%20DH.%20Je%20veux%20choisir%20les%20jeux." data-i18n="drive1TButton">اطلب 1TB عبر واتساب</a>
+          </article>
+        </div>
+        <p class="drive-note" data-i18n="driveNote">يمكنك اختيار الألعاب التي تريدها. نؤكد معك قائمة الألعاب والمساحة المتوفرة قبل تجهيز الديسك.</p>
+      </div>
+    </section>
+
     <section class="container section">
       <div class="offer">
         <div><h2 data-i18n="offerTitle">باغي تزيد ألعاب لجهازك؟</h2><p data-i18n="offerDesc">راسلنا على واتساب، قول لينا نوع جهازك والألعاب اللي بغيتي.</p></div>
@@ -145,6 +193,13 @@
 const translations = {
   ar: {
     navFeatures:'مميزات الخدمة',navGames:'ألعاب مقترحة',navFaq:'الأسئلة الشائعة',navOrder:'اطلب عبر واتساب',
+    navDrive:'ديسك خارجي',driveTitle:'ديسك خارجي معبأ بالألعاب',driveDesc:'اختار السعة المناسبة ليك، وانت اختار الألعاب اللي بغيتي تكون فالديسك',
+    drive500Title:'ديسك خارجي 500GB',drive500Capacity:'500 جيجا مع الألعاب',drive500Line1:'ديسك خارجي بسعة 500GB',
+    driveGamesLine:'اختيار الألعاب حسب رغبتك',driveCheckLine:'تأكيد توفر الألعاب والمساحة قبل التجهيز',
+    drive500Button:'اطلب 500GB عبر واتساب',drive1TTitle:'ديسك خارجي 1TB',drive1TCapacity:'1 تيرا مع الألعاب',
+    drive1TLine1:'ديسك خارجي بسعة 1TB',drive1TButton:'اطلب 1TB عبر واتساب',
+    driveNote:'يمكنك اختيار الألعاب التي تريدها. نؤكد معك قائمة الألعاب والمساحة المتوفرة قبل تجهيز الديسك.',
+
     eyebrow:'خدمة متوفرة بمدينة الداخلة',heroTitle:'خلي المتعة تبدأ مع',heroLead:'نثبتو ليك الألعاب اللي كتختار، بسرعة واهتمام، مع الحفاظ على بيانات جهازك. تواصل معنا واختار الألعاب والمساحة المناسبة ليك.',
     heroOrder:'🎮 اطلب الخدمة الآن',heroFeatures:'اكتشف المميزات',priceNow:'السعر الحالي للخدمة',priceOld:'بدل 80 DH',
     featuresTitle:'علاش تختار STORE DAKHLA؟',featuresDesc:'خدمة ألعاب باهتمام ودعم بعد التثبيت',
@@ -159,6 +214,13 @@ const translations = {
   },
   fr: {
     navFeatures:'Avantages du service',navGames:'Jeux disponibles',navFaq:'Questions fréquentes',navOrder:'Commander sur WhatsApp',
+    navDrive:'Disque externe',driveTitle:'Disque dur externe avec jeux',driveDesc:'Choisissez la capacité qui vous convient et sélectionnez les jeux à installer sur le disque.',
+    drive500Title:'Disque dur externe 500 Go',drive500Capacity:'500 Go avec jeux',drive500Line1:'Disque dur externe de 500 Go',
+    driveGamesLine:'Choix des jeux selon vos préférences',driveCheckLine:'Disponibilité des jeux et espace confirmés avant la préparation',
+    drive500Button:'Commander 500 Go sur WhatsApp',drive1TTitle:'Disque dur externe 1 To',drive1TCapacity:'1 To avec jeux',
+    drive1TLine1:'Disque dur externe de 1 To',drive1TButton:'Commander 1 To sur WhatsApp',
+    driveNote:'Vous pouvez choisir les jeux souhaités. Nous confirmons avec vous la liste des jeux et l’espace disponible avant de préparer le disque.',
+
     eyebrow:'Service disponible à Dakhla',heroTitle:'Le plaisir commence avec',heroLead:'Nous installons les jeux de votre choix avec soin et rapidité, tout en préservant les données de votre console. Contactez-nous pour choisir vos jeux et le stockage adapté.',
     heroOrder:'🎮 Commander maintenant',heroFeatures:'Découvrir les avantages',priceNow:'Prix actuel du service',priceOld:'Au lieu de 80 DH',
     featuresTitle:'Pourquoi choisir STORE DAKHLA ?',featuresDesc:'Un service gaming soigné avec assistance après installation',
