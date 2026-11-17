@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050817">
+  <meta name="description" content="خدمة تثبيت وتحميل ألعاب PS4 في الداخلة. تثبيت سريع وآمن، مع الحفاظ على بيانات جهازك. السعر 50 درهم.">
+  <title>تثبيت ألعاب PS4 في الداخلة | STORE DAKHLA</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
+    :root{--bg:#050817;--panel:#0b1530;--blue:#087cff;--cyan:#16b7ff;--white:#f7f9ff;--muted:#b9c6df;--line:rgba(50,139,255,.3)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at 10% 20%,#06265a 0,transparent 34%),radial-gradient(ellipse at 90% 65%,#061c48 0,transparent 30%),var(--bg);color:var(--white);font-family:'Cairo',Tahoma,Arial,sans-serif;line-height:1.8}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,92%);margin:auto}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:16px}
+    .brand{font-size:1.25rem;font-weight:900;letter-spacing:1px}
+    .brand span{color:var(--cyan)}
+    .nav-links{display:flex;gap:22px;color:var(--muted);font-size:.92rem}
+    .nav-links a:hover{color:white}
+    .lang-switch{display:flex;gap:6px;align-items:center}
+    .lang-switch button{cursor:pointer;border:1px solid var(--line);background:#101c38;color:#dceaff;border-radius:9px;padding:7px 11px;font:700 .85rem Cairo,Tahoma,sans-serif}
+    .lang-switch button.active{background:#087cff;color:#fff;border-color:#48a7ff}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 23px;border-radius:13px;background:linear-gradient(110deg,#0754d7,#078cff);color:white;font-weight:800;box-shadow:0 8px 28px #006dff45;border:1px solid #4ba6ff55;transition:.2s}
+    .btn:hover{transform:translateY(-3px);filter:brightness(1.12)}
+    .btn.secondary{background:#101c38;border:1px solid var(--line);box-shadow:none}
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:42px;padding:45px 0 70px}
+    .eyebrow{display:inline-block;color:#8dcaff;background:#0b2b5b;border:1px solid #145db2;padding:5px 14px;border-radius:30px;font-size:.85rem;font-weight:700}
+    h1{font-size:clamp(2.25rem,5vw,4.3rem);line-height:1.28;margin:18px 0;font-weight:900}
+    h1 span{color:#078cff;text-shadow:0 0 25px #007bff55}
+    .lead{color:var(--muted);font-size:1.08rem;max-width:590px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:25px 0}
+    .price-line{display:flex;align-items:center;gap:15px;margin-top:22px}
+    .price{font-size:3rem;font-weight:900;color:#168cff;line-height:1}
+    .price small{font-size:1.15rem;color:white}
+    .old-price{color:#9eabc2;text-decoration:line-through;font-size:1.1rem}
+    .poster-wrap{position:relative;max-width:470px;margin:auto}
+    .poster-wrap:before{content:"";position:absolute;inset:8% -5%;background:#087cff;filter:blur(75px);opacity:.22;z-index:-1}
+    .poster{width:100%;display:block;border-radius:22px;border:1px solid #248bff88;box-shadow:0 20px 70px #0009}
+    .section{padding:65px 0}
+    .section-head{text-align:center;margin-bottom:34px}
+    .section-head h2{font-size:clamp(1.7rem,3vw,2.5rem);margin:0 0 8px}
+    .section-head p{color:var(--muted);margin:0}
+    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .feature,.game,.faq-item{background:linear-gradient(145deg,#0d1a38,#081126);border:1px solid var(--line);border-radius:18px;padding:22px}
+    .feature .ico{font-size:2rem;margin-bottom:8px}
+    .feature h3{margin:0 0 6px;font-size:1.05rem}
+    .feature p{margin:0;color:var(--muted);font-size:.9rem}
+    .games{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .game{display:flex;align-items:center;gap:14px;padding:17px}
+    .game .number{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:12px;background:#063e91;color:#8dccff;font-weight:900}
+    .game strong{display:block}
+    .game small{color:var(--muted)}
+    .offer{background:linear-gradient(115deg,#063d98,#087cff);border-radius:24px;padding:35px;display:flex;align-items:center;justify-content:space-between;gap:25px;box-shadow:0 18px 55px #006dff30}
+    .offer h2{margin:0 0 7px;font-size:2rem}
+    .offer p{margin:0;color:#e0edff}
+    .offer .btn{background:white;color:#0645a0;box-shadow:none;white-space:nowrap}
+    .faq{max-width:850px;margin:auto;display:grid;gap:12px}
+    .faq-item h3{font-size:1rem;margin:0 0 6px}
+    .faq-item p{margin:0;color:var(--muted);font-size:.94rem}
+    footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);text-align:center}
+    footer strong{color:white}
+    .float-wa{position:fixed;bottom:20px;left:20px;z-index:10;border-radius:50px;padding:12px 18px;background:#16a34a;color:#fff;font-weight:900;box-shadow:0 8px 30px #0008}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;gap:28px;padding-top:25px}.hero-copy{text-align:center}.lead{margin:auto}.hero-actions,.price-line{justify-content:center}.poster-wrap{max-width:390px}.features{grid-template-columns:repeat(2,1fr)}.games{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}}
+    @media(max-width:520px){.container{width:90%}.nav{padding:13px 0}.nav .btn{padding:9px 13px;font-size:.82rem}.hero{padding-bottom:35px}h1{font-size:2.35rem}.lead{font-size:.98rem}.features,.games{grid-template-columns:1fr}.feature{padding:18px}.section{padding:45px 0}.offer{padding:25px 20px;display:block;text-align:center}.offer .btn{margin-top:18px}.price{font-size:2.6rem}.float-wa{bottom:12px;left:12px;font-size:.9rem}}
+  </style>
+</head>
+<body>
+  <header class="container nav">
+    <a class="brand" href="#">STORE <span>DAKHLA</span></a>
+    <nav class="nav-links">
+      <a href="#features" data-i18n="navFeatures">مميزات الخدمة</a><a href="https://ysf1988.github.io/PS4/#first" data-i18n="navGames">ألعاب مقترحة</a><a href="#faq" data-i18n="navFaq">الأسئلة الشائعة</a>
+    </nav>
+    <div class="lang-switch" aria-label="Language"><button type="button" class="active" data-lang="ar">AR</button><button type="button" data-lang="fr">FR</button></div>
+    <a class="btn" data-i18n="navOrder" href="https://wa.me/212777497771?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%B3%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%AA%D8%AB%D8%A8%D9%8A%D8%AA%20%D8%A3%D9%84%D8%B9%D8%A7%D8%A8%20PS4">اطلب عبر واتساب</a>
+  </header>
+
+  <main>
+    <section class="container hero">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="eyebrow">خدمة متوفرة بمدينة الداخلة</span>
+        <h1><span data-i18n="heroTitle">خلي المتعة تبدأ مع</span> <span>ألعاب PS4</span></h1>
+        <p class="lead" data-i18n="heroLead">نثبتو ليك الألعاب اللي كتختار، بسرعة واهتمام، مع الحفاظ على بيانات جهازك. تواصل معنا واختار الألعاب والمساحة المناسبة ليك.</p>
+        <div class="hero-actions">
+          <a class="btn" href="https://wa.me/212777497771?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%AB%D8%A8%D8%AA%20%D8%A3%D9%84%D8%B9%D8%A7%D8%A8%20PS4" data-i18n="heroOrder">🎮 اطلب الخدمة الآن</a>
+          <a class="btn secondary" href="#features" data-i18n="heroFeatures">اكتشف المميزات</a>
+        </div>
+        <div class="price-line">
+          <div class="price">50 <small>DH</small></div>
+          <div><div><strong data-i18n="priceNow">السعر الحالي للخدمة</strong></div><div class="old-price" data-i18n="priceOld">بدل 80 DH</div></div>
+        </div>
+      </div>
+      <div class="poster-wrap">
+        <img class="poster" src="assets/ps4-service-ad.jpg" alt="إعلان خدمة تثبيت ألعاب PS4 من STORE DAKHLA">
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-head"><h2 data-i18n="featuresTitle">علاش تختار STORE DAKHLA؟</h2><p data-i18n="featuresDesc">خدمة ألعاب باهتمام ودعم بعد التثبيت</p></div>
+        <div class="features">
+          <article class="feature"><div class="ico">⚡</div><h3 data-i18n="f1t">تثبيت سريع</h3><p data-i18n="f1d">نخدمو على تثبيت الألعاب في أقرب وقت ممكن حسب عدد الألعاب وحجمها.</p></article>
+          <article class="feature"><div class="ico">🛡️</div><h3 data-i18n="f2t">الحفاظ على بياناتك</h3><p data-i18n="f2d">نحرصو على عدم حذف بيانات الجهاز أثناء عملية التثبيت.</p></article>
+          <article class="feature"><div class="ico">🎮</div><h3 data-i18n="f3t">اختيار الألعاب</h3><p data-i18n="f3d">اختار الألعاب اللي بغيتي قبل ما نبداو عملية التثبيت.</p></article>
+          <article class="feature"><div class="ico">🔧</div><h3 data-i18n="f4t">دعم تقني</h3><p data-i18n="f4d">تواصل معنا إذا احتجت مساعدة أو توضيح بعد الخدمة.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="games">
+      <div class="container">
+        <div class="section-head"><h2 data-i18n="gamesTitle">ألعاب تقدر تختار منها</h2><p data-i18n="gamesDesc">اكتشف كتالوج ألعاب PS4 واختار الألعاب اللي تناسبك</p></div>
+        <div class="offer">
+          <div><h2 data-i18n="catalogTitle">اكتشف مكتبة ألعاب PS4</h2><p data-i18n="catalogDesc">تصفح الألعاب المتوفرة، وشوف التفاصيل واختار الألعاب المفضلة عندك.</p></div>
+          <a class="btn" href="https://ysf1988.github.io/PS4/#first" target="_blank" rel="noopener" data-i18n="catalogButton">تصفح جميع الألعاب ←</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container section">
+      <div class="offer">
+        <div><h2 data-i18n="offerTitle">باغي تزيد ألعاب لجهازك؟</h2><p data-i18n="offerDesc">راسلنا على واتساب، قول لينا نوع جهازك والألعاب اللي بغيتي.</p></div>
+        <a class="btn" href="https://wa.me/212777497771?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%B3%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%AA%D8%AB%D8%A8%D9%8A%D8%AA%20%D8%A3%D9%84%D8%B9%D8%A7%D8%A8%20PS4" data-i18n="offerButton">تواصل معنا الآن ←</a>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head"><h2 data-i18n="faqTitle">أسئلة كتهمك</h2><p data-i18n="faqDesc">معلومات قبل طلب الخدمة</p></div>
+        <div class="faq">
+          <article class="faq-item"><h3 data-i18n="q1">واش غادي تتمسح ليا بيانات الجهاز؟</h3><p data-i18n="a1">الخدمة مصممة باش نحافظو على بيانات الجهاز، وكنراجعو الحالة معاك قبل بداية العمل.</p></article>
+          <article class="faq-item"><h3 data-i18n="q2">واش نقدر نختار الألعاب؟</h3><p data-i18n="a2">نعم، صيفط لينا لائحة الألعاب اللي بغيتي ونتأكدو من التوفر والمساحة المطلوبة.</p></article>
+          <article class="faq-item"><h3 data-i18n="q3">فين كتتوفر الخدمة؟</h3><p data-i18n="a3">الخدمة متوفرة بمدينة الداخلة. تواصل معنا لتأكيد التفاصيل والموعد.</p></article>
+          <article class="faq-item"><h3 data-i18n="q4">كيفاش نطلب الخدمة؟</h3><p data-i18n="a4">ضغط على زر واتساب، وصيفط لينا نوع جهازك والألعاب اللي بغيتي تثبت.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container"><strong>STORE DAKHLA</strong><br><span data-i18n="footerLine">خدمات وألعاب PlayStation في الداخلة</span><br><small>© 2026 STORE DAKHLA — جميع الحقوق محفوظة</small></div></footer>
+  <a class="float-wa" href="https://wa.me/212777497771?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%B3%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" aria-label="تواصل معنا عبر واتساب" data-i18n="floatWhatsApp">WhatsApp ☎</a>
+
+<script>
+const translations = {
+  ar: {
+    navFeatures:'مميزات الخدمة',navGames:'ألعاب مقترحة',navFaq:'الأسئلة الشائعة',navOrder:'اطلب عبر واتساب',
+    eyebrow:'خدمة متوفرة بمدينة الداخلة',heroTitle:'خلي المتعة تبدأ مع',heroLead:'نثبتو ليك الألعاب اللي كتختار، بسرعة واهتمام، مع الحفاظ على بيانات جهازك. تواصل معنا واختار الألعاب والمساحة المناسبة ليك.',
+    heroOrder:'🎮 اطلب الخدمة الآن',heroFeatures:'اكتشف المميزات',priceNow:'السعر الحالي للخدمة',priceOld:'بدل 80 DH',
+    featuresTitle:'علاش تختار STORE DAKHLA؟',featuresDesc:'خدمة ألعاب باهتمام ودعم بعد التثبيت',
+    f1t:'تثبيت سريع',f1d:'نخدمو على تثبيت الألعاب في أقرب وقت ممكن حسب عدد الألعاب وحجمها.',
+    f2t:'الحفاظ على بياناتك',f2d:'نحرصو على عدم حذف بيانات الجهاز أثناء عملية التثبيت.',
+    f3t:'اختيار الألعاب',f3d:'اختار الألعاب اللي بغيتي قبل ما نبداو عملية التثبيت.',
+    f4t:'دعم تقني',f4d:'تواصل معنا إذا احتجت مساعدة أو توضيح بعد الخدمة.',
+    gamesTitle:'ألعاب تقدر تختار منها',gamesDesc:'اكتشف كتالوج ألعاب PS4 واختار الألعاب اللي تناسبك',catalogTitle:'اكتشف مكتبة ألعاب PS4',catalogDesc:'تصفح الألعاب المتوفرة، وشوف التفاصيل واختار الألعاب المفضلة عندك.',catalogButton:'تصفح جميع الألعاب ←',
+    offerTitle:'باغي تزيد ألعاب لجهازك؟',offerDesc:'راسلنا على واتساب، قول لينا نوع جهازك والألعاب اللي بغيتي.',offerButton:'تواصل معنا الآن ←',
+    faqTitle:'أسئلة كتهمك',faqDesc:'معلومات قبل طلب الخدمة',q1:'واش غادي تتمسح ليا بيانات الجهاز؟',a1:'الخدمة مصممة باش نحافظو على بيانات الجهاز، وكنراجعو الحالة معاك قبل بداية العمل.',q2:'واش نقدر نختار الألعاب؟',a2:'نعم، صيفط لينا لائحة الألعاب اللي بغيتي ونتأكدو من التوفر والمساحة المطلوبة.',q3:'فين كتتوفر الخدمة؟',a3:'الخدمة متوفرة بمدينة الداخلة. تواصل معنا لتأكيد التفاصيل والموعد.',q4:'كيفاش نطلب الخدمة؟',a4:'ضغط على زر واتساب، وصيفط لينا نوع جهازك والألعاب اللي بغيتي تثبت.',
+    footerLine:'خدمات وألعاب PlayStation في الداخلة',floatWhatsApp:'WhatsApp ☎'
+  },
+  fr: {
+    navFeatures:'Avantages du service',navGames:'Jeux disponibles',navFaq:'Questions fréquentes',navOrder:'Commander sur WhatsApp',
+    eyebrow:'Service disponible à Dakhla',heroTitle:'Le plaisir commence avec',heroLead:'Nous installons les jeux de votre choix avec soin et rapidité, tout en préservant les données de votre console. Contactez-nous pour choisir vos jeux et le stockage adapté.',
+    heroOrder:'🎮 Commander maintenant',heroFeatures:'Découvrir les avantages',priceNow:'Prix actuel du service',priceOld:'Au lieu de 80 DH',
+    featuresTitle:'Pourquoi choisir STORE DAKHLA ?',featuresDesc:'Un service gaming soigné avec assistance après installation',
+    f1t:'Installation rapide',f1d:'Installation dans les meilleurs délais, selon le nombre et la taille des jeux.',
+    f2t:'Protection de vos données',f2d:'Nous veillons à préserver les données de votre console pendant l’installation.',
+    f3t:'Choix des jeux',f3d:'Choisissez les jeux souhaités avant le début de l’installation.',
+    f4t:'Assistance technique',f4d:'Contactez-nous si vous avez besoin d’aide ou d’informations après le service.',
+    gamesTitle:'Choisissez vos jeux',gamesDesc:'Découvrez le catalogue PS4 et sélectionnez les jeux qui vous intéressent',catalogTitle:'Découvrez la bibliothèque de jeux PS4',catalogDesc:'Parcourez les jeux disponibles, consultez les détails et choisissez vos préférés.',catalogButton:'Voir tous les jeux ←',
+    offerTitle:'Envie d’ajouter des jeux à votre console ?',offerDesc:'Écrivez-nous sur WhatsApp et indiquez le modèle de votre console et les jeux souhaités.',offerButton:'Contactez-nous maintenant ←',
+    faqTitle:'Questions fréquentes',faqDesc:'Les informations à connaître avant de commander',q1:'Mes données seront-elles supprimées ?',a1:'Le service vise à préserver les données de votre console. Nous vérifions son état avec vous avant de commencer.',q2:'Puis-je choisir les jeux ?',a2:'Oui. Envoyez-nous votre liste et nous vérifierons la disponibilité ainsi que l’espace nécessaire.',q3:'Où le service est-il disponible ?',a3:'Le service est disponible à Dakhla. Contactez-nous pour confirmer les détails et le rendez-vous.',q4:'Comment commander le service ?',a4:'Cliquez sur le bouton WhatsApp et envoyez-nous le modèle de votre console ainsi que les jeux souhaités.',
+    footerLine:'Services et jeux PlayStation à Dakhla',floatWhatsApp:'WhatsApp ☎'
+  }
+};
+function setLanguage(lang){
+  const dict=translations[lang]||translations.ar;
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==='fr'?'ltr':'rtl';
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;if(dict[key]!==undefined)el.innerHTML=dict[key];});
+  document.querySelectorAll('[data-lang]').forEach(btn=>btn.classList.toggle('active',btn.dataset.lang===lang));
+  document.title=lang==='fr'?'Installation de jeux PS4 à Dakhla | STORE DAKHLA':'تثبيت ألعاب PS4 في الداخلة | STORE DAKHLA';
+}
+document.querySelectorAll('[data-lang]').forEach(btn=>btn.addEventListener('click',()=>setLanguage(btn.dataset.lang)));
+</script>
+
+</body>
+</html>
