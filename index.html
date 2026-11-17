@@ -1,144 +1,648 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#050817">
-  <meta name="description" content="خدمة تثبيت وتحميل ألعاب PS4 في الداخلة. تثبيت سريع وآمن، مع الحفاظ على بيانات جهازك. السعر 50 درهم.">
-  <title>تثبيت ألعاب PS4 في الداخلة | STORE DAKHLA</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap');
-    :root{--bg:#050817;--panel:#0b1530;--blue:#087cff;--cyan:#16b7ff;--white:#f7f9ff;--muted:#b9c6df;--line:rgba(50,139,255,.3)}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:radial-gradient(ellipse at 10% 20%,#06265a 0,transparent 34%),radial-gradient(ellipse at 90% 65%,#061c48 0,transparent 30%),var(--bg);color:var(--white);font-family:'Cairo',Tahoma,Arial,sans-serif;line-height:1.8}
-    a{color:inherit;text-decoration:none}
-    .container{width:min(1120px,92%);margin:auto}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:16px}
-    .brand{font-size:1.25rem;font-weight:900;letter-spacing:1px}
-    .brand span{color:var(--cyan)}
-    .nav-links{display:flex;gap:22px;color:var(--muted);font-size:.92rem}
-    .nav-links a:hover{color:white}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 23px;border-radius:13px;background:linear-gradient(110deg,#0754d7,#078cff);color:white;font-weight:800;box-shadow:0 8px 28px #006dff45;border:1px solid #4ba6ff55;transition:.2s}
-    .btn:hover{transform:translateY(-3px);filter:brightness(1.12)}
-    .btn.secondary{background:#101c38;border:1px solid var(--line);box-shadow:none}
-    .hero{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:42px;padding:45px 0 70px}
-    .eyebrow{display:inline-block;color:#8dcaff;background:#0b2b5b;border:1px solid #145db2;padding:5px 14px;border-radius:30px;font-size:.85rem;font-weight:700}
-    h1{font-size:clamp(2.25rem,5vw,4.3rem);line-height:1.28;margin:18px 0;font-weight:900}
-    h1 span{color:#078cff;text-shadow:0 0 25px #007bff55}
-    .lead{color:var(--muted);font-size:1.08rem;max-width:590px}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:25px 0}
-    .price-line{display:flex;align-items:center;gap:15px;margin-top:22px}
-    .price{font-size:3rem;font-weight:900;color:#168cff;line-height:1}
-    .price small{font-size:1.15rem;color:white}
-    .old-price{color:#9eabc2;text-decoration:line-through;font-size:1.1rem}
-    .poster-wrap{position:relative;max-width:470px;margin:auto}
-    .poster-wrap:before{content:"";position:absolute;inset:8% -5%;background:#087cff;filter:blur(75px);opacity:.22;z-index:-1}
-    .poster{width:100%;display:block;border-radius:22px;border:1px solid #248bff88;box-shadow:0 20px 70px #0009}
-    .section{padding:65px 0}
-    .section-head{text-align:center;margin-bottom:34px}
-    .section-head h2{font-size:clamp(1.7rem,3vw,2.5rem);margin:0 0 8px}
-    .section-head p{color:var(--muted);margin:0}
-    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .feature,.game,.faq-item{background:linear-gradient(145deg,#0d1a38,#081126);border:1px solid var(--line);border-radius:18px;padding:22px}
-    .feature .ico{font-size:2rem;margin-bottom:8px}
-    .feature h3{margin:0 0 6px;font-size:1.05rem}
-    .feature p{margin:0;color:var(--muted);font-size:.9rem}
-    .games{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-    .game{display:flex;align-items:center;gap:14px;padding:17px}
-    .game .number{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:12px;background:#063e91;color:#8dccff;font-weight:900}
-    .game strong{display:block}
-    .game small{color:var(--muted)}
-    .offer{background:linear-gradient(115deg,#063d98,#087cff);border-radius:24px;padding:35px;display:flex;align-items:center;justify-content:space-between;gap:25px;box-shadow:0 18px 55px #006dff30}
-    .offer h2{margin:0 0 7px;font-size:2rem}
-    .offer p{margin:0;color:#e0edff}
-    .offer .btn{background:white;color:#0645a0;box-shadow:none;white-space:nowrap}
-    .faq{max-width:850px;margin:auto;display:grid;gap:12px}
-    .faq-item h3{font-size:1rem;margin:0 0 6px}
-    .faq-item p{margin:0;color:var(--muted);font-size:.94rem}
-    footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);text-align:center}
-    footer strong{color:white}
-    .float-wa{position:fixed;bottom:20px;left:20px;z-index:10;border-radius:50px;padding:12px 18px;background:#16a34a;color:#fff;font-weight:900;box-shadow:0 8px 30px #0008}
-    @media(max-width:850px){.hero{grid-template-columns:1fr;gap:28px;padding-top:25px}.hero-copy{text-align:center}.lead{margin:auto}.hero-actions,.price-line{justify-content:center}.poster-wrap{max-width:390px}.features{grid-template-columns:repeat(2,1fr)}.games{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}}
-    @media(max-width:520px){.container{width:90%}.nav{padding:13px 0}.nav .btn{padding:9px 13px;font-size:.82rem}.hero{padding-bottom:35px}h1{font-size:2.35rem}.lead{font-size:.98rem}.features,.games{grid-template-columns:1fr}.feature{padding:18px}.section{padding:45px 0}.offer{padding:25px 20px;display:block;text-align:center}.offer .btn{margin-top:18px}.price{font-size:2.6rem}.float-wa{bottom:12px;left:12px;font-size:.9rem}}
-  </style>
+ 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:image" content="https://Ysf1988.github.io/store-dakhla-catalogue/store-dakhla-preview.jpg">
+<meta property="og:image:width" content="1151">
+<meta property="og:image:height" content="1367">
+<meta property="og:url" content="https://Ysf1988.github.io/store-dakhla-catalogue/">
+<meta property="og:description" content="اكتشف ألعاب PS4، تصفح الأغلفة وابحث عن لعبتك واطلبها مباشرة عبر واتساب. مدينة الداخلة.">
+<meta property="og:locale" content="ar_MA">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="STORE DAKHLA | كتالوج ألعاب PS4">
+<meta name="twitter:image" content="https://Ysf1988.github.io/store-dakhla-catalogue/store-dakhla-preview.jpg">
+<title>STORE DAKHLA | كتالوج ألعاب PS4</title>
+
+<style>
+
+
+/* STORE DAKHLA - Professional Gaming Cover */
+
+.store-cover {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    min-height: 90vh;
+    padding: 55px 20px 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    background:
+        radial-gradient(ellipse at 15% 20%, rgba(0, 112, 255, .28), transparent 45%),
+        radial-gradient(ellipse at 85% 75%, rgba(139, 40, 255, .30), transparent 45%),
+        linear-gradient(135deg, #050914, #10182d 55%, #080b19);
+}
+.store-cover {
+    position: relative;
+    background:
+        linear-gradient(
+            rgba(3, 8, 22, 0.78),
+            rgba(3, 8, 22, 0.88)
+        ),
+        url("https://Ysf1988.github.io/store-background.jpg")
+        center center / cover no-repeat;
+    background-attachment: scroll;
+}
+.cover-glow {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        linear-gradient(120deg, transparent 30%, rgba(45, 130, 255, .08), transparent 70%);
+}
+
+.store-logo-area {
+    margin-bottom: 30px;
+}
+
+.cover-tag {
+    display: inline-block;
+    color: #69b8ff;
+    border: 1px solid rgba(105,184,255,.4);
+    border-radius: 30px;
+    padding: 7px 18px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.store-logo-area h1 {
+    font-size: clamp(34px, 7vw, 62px);
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin: 5px 0;
+    color: #fff;
+    text-shadow: 0 0 25px rgba(0,145,255,.55);
+}
+
+.store-logo-area p {
+    color: #a9caff;
+    font-size: 17px;
+}
+
+.logo-line {
+    width: 110px;
+    height: 4px;
+    margin: 15px auto;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #168cff, #a855f7);
+}
+
+.store-badge {
+    width: 100%;
+    max-width: 650px;
+    padding: 30px 25px;
+    box-sizing: border-box;
+    border: 1px solid rgba(130,170,255,.22);
+    border-radius: 22px;
+    background: rgba(15,25,48,.82);
+    box-shadow: 0 20px 60px rgba(0,0,0,.4);
+    backdrop-filter: blur(12px);
+}
+
+.store-badge h2 {
+    color: #fff;
+    font-size: 27px;
+    margin: 0 0 18px;
+}
+
+.store-badge h3 {
+    color: #69b8ff;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.store-badge > p {
+    color: #d0d9e9;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.cover-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.cover-features div {
+    padding: 10px 14px;
+    background: rgba(44,113,220,.14);
+    border: 1px solid rgba(91,155,255,.25);
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.qr-container {
+    margin: 25px auto;
+}
+
+.qr-container p {
+    color: #c7d8f5;
+    font-size: 14px;
+}
+
+.qr-container img {
+    width: 145px;
+    height: 145px;
+    object-fit: contain;
+    padding: 8px;
+    background: white;
+    border-radius: 12px;
+}
+
+.cover-wa-btn,
+.cover-games-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 360px;
+    margin: 12px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: .25s ease;
+}
+
+.cover-wa-btn {
+    color: white;
+    background: linear-gradient(135deg, #16a34a, #059669);
+    box-shadow: 0 7px 22px rgba(22,163,74,.25);
+}
+
+.cover-games-btn {
+    color: white;
+    background: linear-gradient(135deg, #087cff, #7138df);
+    box-shadow: 0 7px 22px rgba(37,99,235,.25);
+}
+
+.cover-wa-btn:hover,
+.cover-games-btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.12);
+}
+
+.store-footer-note {
+    margin-top: 25px;
+    color: #b6c5df;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+@media (max-width: 600px) {
+    .store-cover {
+        padding: 35px 12px 25px;
+    }
+
+    .store-badge {
+        padding: 23px 16px;
+    }
+
+    .store-badge h2 {
+        font-size: 22px;
+    }
+
+    .store-badge h3 {
+        font-size: 16px;
+    }
+}
+
+:root {
+ --blue:#0756a5;
+ --dark:#102d55;
+ --light:#eaf3fc;
+ --border:#c9dced;
+ --wa:#25d366;
+ --cover-height: 50%; /* القيمة الافتراضية لارتفاع الغلاف */
+}
+*{box-sizing:border-box}
+body{
+ margin:0;background:#e9eef5;color:#17283b;
+ font-family:'Segoe UI', Tahoma, Arial, sans-serif;
+}
+.filters{
+ position:sticky;top:0;z-index:100;
+ background:#102d55;color:white;padding:12px;
+ display:flex;gap:9px;justify-content:center;align-items:center;flex-wrap:wrap;
+ box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.toolbar-group {
+ display: flex;
+ gap: 5px;
+ align-items: center;
+ background: rgba(255,255,255,0.1);
+ padding: 4px 8px;
+ border-radius: 6px;
+ border: 1px solid rgba(255,255,255,0.2);
+ font-size: 13px;
+}
+button,select,input{
+ padding:8px 12px;border-radius:6px;border:1px solid #b9cee3;
+ font-family:inherit;font-size:13px;
+}
+button{background:#1680db;color:white;border:0;cursor:pointer;font-weight:bold;transition:background 0.2s}
+button:hover{background:#0863b5}
+.whatsapp-btn{background:#25d366 !important;}
+.whatsapp-btn:hover{background:#1ebe57 !important;}
+input{min-width:180px}
+
+#count{text-align:center;color:#52677e;padding:5px;font-weight:bold}
+
+.page{
+ width:210mm;height:297mm;padding:10mm;
+ margin:15px auto;background:white;
+ position:relative;overflow:hidden;
+ page-break-after:always;
+ box-shadow:0 3px 15px #0002;
+}
+
+/* العلامة المائية الرقمية */
+.page::before {
+ content: "STORE DAKHLA - 0777497771";
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%) rotate(-35deg);
+ font-size: 55px;
+ font-weight: bold;
+ color: rgba(7, 86, 165, 0.03);
+ white-space: nowrap;
+ z-index: 0;
+ pointer-events: none;
+}
+
+/* صفحة البداية الاحترافية */
+.store-cover {
+ background: linear-gradient(135deg, #071b36 0%, #102d55 50%, #0756a5 100%);
+ color: white;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ align-items: center;
+ text-align: center;
+ padding: 40px 20px;
+}
+.store-cover::before { display: none; }
+
+.store-logo-area h1 {
+ font-size: 52px;
+ margin: 0 0 10px 0;
+ letter-spacing: 2px;
+ color: #fff;
+ text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.store-logo-area p {
+ font-size: 22px;
+ color: #8bc9ff;
+ margin: 0;
+ font-weight: 600;
+}
+.store-badge {
+ background: rgba(255, 255, 255, 0.1);
+ border: 2px dashed #8bc9ff;
+ padding: 25px;
+ border-radius: 15px;
+ width: 100%;
+ max-width: 600px;
+ backdrop-filter: blur(5px);
+ margin: 15px 0;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 15px;
+}
+.store-badge h2 {
+ font-size: 24px;
+ margin: 0;
+ color: #fff;
+}
+.store-badge p {
+ font-size: 15px;
+ color: #d0e8ff;
+ line-height: 1.6;
+ margin: 0;
+}
+
+.qr-container {
+ background: white;
+ padding: 10px;
+ border-radius: 10px;
+ display: inline-block;
+ box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.qr-container img {
+ width: 110px;
+ height: 110px;
+ display: block;
+}
+
+.cover-wa-btn {
+ display: inline-flex;
+ align-items: center;
+ gap: 10px;
+ background: #25d366;
+ color: white;
+ padding: 12px 25px;
+ border-radius: 30px;
+ font-size: 16px;
+ font-weight: bold;
+ text-decoration: none;
+ box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+ transition: transform 0.2s;
+}
+.cover-wa-btn:hover {
+ transform: scale(1.05);
+ background: #1ebe57;
+}
+.store-footer-note {
+ font-size: 13px;
+ color: #a0c4e8;
+ border-top: 1px solid rgba(255,255,255,0.2);
+ width: 100%;
+ padding-top: 15px;
+}
+
+.section-title{
+ color:var(--dark);border-bottom:3px solid var(--blue);
+ padding-bottom:6px;margin:0 0 6px;font-size:20px;
+ position: relative;
+ z-index: 1;
+}
+.page-info{
+ color:#64788d;font-size:10.5px;margin-bottom:6px;
+ position: relative;
+ z-index: 1;
+}
+/* شبكة 12 لعبة في الصفحة */
+.games-grid{
+ display:grid;
+ grid-template-columns:repeat(4,minmax(0,1fr));
+ grid-template-rows:repeat(3,minmax(0,1fr));
+ gap:6px;height:238mm;
+ position: relative;
+ z-index: 1;
+}
+.game-card{
+ border:1px solid var(--border);border-radius:6px;
+ padding:4px;background:var(--light);
+ display:flex;flex-direction:column;
+ align-items:center;min-height:0;overflow:hidden;
+ position:relative;text-align:center;
+}
+.game-number {
+    display: none !important;
+}
+/* خانة الاختيار للسلة المتعددة */
+.game-checkbox {
+ position: absolute;
+ top: 4px;
+ left: 46px;
+ width: 15px;
+ height: 15px;
+ cursor: pointer;
+ z-index: 2;
+}
+
+/* استخدام متغير CSS للتحكم الديناميكي بحجم الأغلفة */
+.game-card img{
+ width:100%;
+ object-fit:contain;
+ background:white;border-radius:3px;
+ transition: height 0.2s ease;
+}
+.cover-placeholder{
+ width:100%;
+ height: var(--cover-height);
+ border-radius:3px;
+ background:linear-gradient(145deg,#102d55,#1769aa);
+ color:white;display:flex;flex-direction:column;
+ justify-content:center;align-items:center;
+ transition: height 0.2s ease;
+}
+.cover-placeholder strong{font-size:16px}
+.cover-placeholder small{color:#b9ddff;margin-top:2px;font-size:9px}
+
+.game-name{
+ font-size:9px;font-weight:bold;
+ line-height:1.1;margin-top:2px;
+ max-height:22px;overflow:hidden;
+ direction:ltr;
+}
+.genre-tag{
+ color:#0756a5;font-size:7.5px;font-weight:bold;
+ margin-top:1px;
+}
+.game-meta{
+ font-size:7px;color:#53677e;
+ line-height:1.2;margin-top:auto;
+ width: 100%;
+}
+/* زر طلب اللعبة الفردي داخل البطاقة */
+.card-wa-btn {
+ margin-top: 2px;
+ width: 100%;
+ background: #25d366;
+ color: white;
+ border: none;
+ border-radius: 3px;
+ padding: 5px;
+ font-size: 7.5px;
+ font-weight: bold;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 2px;
+ text-decoration: none;
+}
+.card-wa-btn:hover { background: #1ebe57; }
+
+/* شريط السلة العائم للطلبات المتعددة */
+.floating-cart {
+ position: fixed;
+ bottom: 20px;
+ left: 50%;
+ transform: translateX(-50%);
+ background: #102d55;
+ color: white;
+ padding: 12px 25px;
+ border-radius: 30px;
+ box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+ display: flex;
+ align-items: center;
+ gap: 20px;
+ z-index: 1000;
+ font-weight: bold;
+ font-size: 14px;
+ border: 2px solid #8bc9ff;
+}
+.floating-cart button {
+ background: #25d366;
+ color: white;
+ border: none;
+ padding: 8px 18px;
+ border-radius: 20px;
+ cursor: pointer;
+ font-weight: bold;
+}
+.floating-cart button:hover { background: #1ebe57; }
+
+.footer{
+ position:absolute;bottom:4mm;left:10mm;right:10mm;
+ border-top:1px solid var(--border);padding-top:4px;
+ font-size:9.5px;color:#0756a5;font-weight:bold;
+ display:flex;justify-content:space-between;
+ z-index: 1;
+}
+
+/* استجابة شاشات الهواتف المحمولة */
+@media screen and (max-width: 768px) {
+ .games-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  grid-template-rows: repeat(6, minmax(0, 1fr)) !important;
+  height: auto !important;
+ }
+ .page {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 100vh;
+  margin: 5px 0;
+  padding: 8mm;
+ }
+}
+
+@media print{
+ @page{size:A4 portrait;margin:0}
+ body{background:white}
+ .toolbar,.filters,#count,.floating-cart,.game-checkbox{display:none!important}
+ .page{
+  margin:0;width:210mm;height:297mm;
+  box-shadow:none;print-color-adjust:exact;
+  -webkit-print-color-adjust:exact;
+ }
+}
+
+/* ===== إضافات ===== */
+.chips{display:flex;gap:6px;overflow-x:auto;width:100%;padding:2px 0;scrollbar-width:none}
+.chip{white-space:nowrap;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:6px 12px}
+.chip.on{background:#1680db}
+.lang-sw button{padding:4px 9px;background:transparent;border:1px solid transparent}
+.lang-sw button.on{background:#1680db}
+.cart-panel{position:fixed;bottom:76px;left:50%;transform:translateX(-50%);width:min(92vw,420px);max-height:50vh;overflow:auto;background:#fff;color:#17283b;border-radius:14px;box-shadow:0 8px 30px #0004;padding:12px;z-index:1001;font-size:14px}
+.cart-row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #e3ecf5}
+.cart-row button{background:#e11d48;padding:2px 8px}
+.cart-total{font-weight:bold;padding:8px 0;display:flex;justify-content:space-between}
+.clear-btn{background:#64788d;width:100%}
+.empty-box{text-align:center;margin-top:50px;position:relative;z-index:1}
+.empty-box .cover-wa-btn{margin-top:20px}
+.floating-cart{width:max-content;max-width:94vw}
+@media screen and (max-width:768px){
+ .games-grid{grid-template-rows:none!important;grid-auto-rows:auto;gap:8px}
+ .game-card{padding:6px;overflow:visible}
+ .game-name{font-size:13px;max-height:none;margin:4px 0}
+ .genre-tag{font-size:11px}
+ .game-meta{font-size:11px;line-height:1.6}
+ .card-wa-btn{font-size:12px;padding:9px;margin-top:6px}
+ .game-checkbox{width:22px;height:22px;top:6px;left:6px}
+ .footer{position:static;margin-top:10px}
+ .store-cover{min-height:auto}
+ .filters{padding:8px}
+}
+.how-box{width:100%;text-align:start;background:rgba(255,255,255,.08);border:1px solid rgba(139,201,255,.3);border-radius:12px;padding:12px 16px;font-size:14px;line-height:1.9}
+.how-box h4{margin:0 0 6px;color:#8bc9ff;font-size:16px}
+.how-box p{margin:4px 0}
+/* ===== وضع الموقع على الشاشة (A4 للطباعة فقط) ===== */
+@media screen{
+ body{background:#eef2f7}
+ .page{width:100%!important;max-width:1200px;height:auto!important;min-height:0!important;margin:0 auto!important;padding:20px 16px 8px!important;background:transparent;box-shadow:none;overflow:visible}
+ .page::before,.page .page-info,.page .footer{display:none}
+ .page.cont{padding-top:0!important}
+ .page.cont .section-title{display:none}
+ .section-title{font-size:24px;margin:18px 0 14px}
+ .games-grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))!important;grid-template-rows:none!important;grid-auto-rows:auto;height:auto!important;gap:14px}
+ .game-card{padding:10px;background:#fff;border-radius:14px;box-shadow:0 2px 10px #0001;overflow:visible;transition:transform .2s,box-shadow .2s}
+ .game-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px #0002}
+ .game-card img,.cover-placeholder{aspect-ratio:1/1;height:auto;object-fit:contain}
+ .game-name{font-size:14px;max-height:none;margin:8px 0 2px;line-height:1.3}
+ .genre-tag{font-size:12px}
+ .game-meta{font-size:12px;line-height:1.7;margin:6px 0}
+ .card-wa-btn{font-size:13px;padding:9px;margin-top:auto;border-radius:8px}
+ .game-checkbox{width:22px;height:22px;top:8px;left:8px}
+ .page.store-cover{background:radial-gradient(ellipse at 15% 20%,rgba(0,112,255,.28),transparent 45%),radial-gradient(ellipse at 85% 75%,rgba(139,40,255,.30),transparent 45%),linear-gradient(135deg,#071b36 0%,#102d55 50%,#0756a5 100%);max-width:none;min-height:85vh!important;padding:50px 16px!important}
+}
+@media screen and (max-width:600px){
+ .games-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px}
+ .game-card{padding:6px}.game-name{font-size:13px}.game-meta{font-size:11px}
+}
+.reviews{max-width:900px;margin:30px auto 110px;padding:0 16px}
+.rev-card{background:#fff;border-radius:12px;padding:12px 16px;margin:10px 0;box-shadow:0 2px 8px #0001}
+.rev-card p{margin:6px 0 0}
+.rev-form{background:#fff;border-radius:14px;padding:16px;margin:16px 0;display:flex;flex-direction:column;gap:10px;box-shadow:0 2px 10px #0001}
+.rev-form input,.rev-form select,.rev-form textarea{width:100%;font-size:14px}
+.rev-actions{display:flex;flex-wrap:wrap;gap:8px}
+.rev-actions button{flex:1;min-width:150px;padding:10px}
+.b-fb{background:#1877f2!important}.b-ig{background:linear-gradient(45deg,#f09433,#dc2743,#bc1888)!important}.b-wa{background:#25d366!important}
+#revMsg{color:#0756a5;font-size:13px}
+.site-footer{margin:40px 0 0;padding:36px 16px 100px;background:linear-gradient(135deg,#071b36,#0b2547 60%,#0756a5);color:#e8f1fb;text-align:center}
+.site-footer:empty{display:none}
+.sf-inner{max-width:900px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px}
+.sf-brand{font-size:24px;font-weight:800;letter-spacing:2px;color:#fff}
+.sf-brand small{display:block;font-size:13px;font-weight:400;letter-spacing:0;color:#8bc9ff;margin-top:4px}
+.sf-title{font-size:14px;color:#9db4cc}
+.sf-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.sf-links a{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff;text-decoration:none;font-size:14px;transition:transform .2s,background .2s}
+.sf-links a:hover{transform:translateY(-2px)}
+.sf-links svg{width:18px;height:18px}
+.sf-links a.ig:hover{background:linear-gradient(45deg,#f09433,#dc2743,#bc1888)}
+.sf-links a.tt:hover{background:#000}
+.sf-links a.fb:hover{background:#1877f2}
+.sf-links a.wa:hover{background:#25d366}
+.sf-copy{width:100%;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);font-size:12px;color:#8aa3bd}
+@media print{.site-footer,.reviews,.chips,.lang-sw,#cartPanel{display:none!important}}
+</style>
 </head>
+
 <body>
-  <header class="container nav">
-    <a class="brand" href="#">STORE <span>DAKHLA</span></a>
-    <nav class="nav-links">
-      <a href="#features">مميزات الخدمة</a><a href="#games">ألعاب مقترحة</a><a href="#faq">الأسئلة الشائعة</a>
-    </nav>
-    <a class="btn" href="https://wa.me/212777497771?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%B3%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%AA%D8%AB%D8%A8%D9%8A%D8%AA%20%D8%A3%D9%84%D8%B9%D8%A7%D8%A8%20PS4">اطلب عبر واتساب</a>
-  </header>
 
-  <main>
-    <section class="container hero">
-      <div class="hero-copy">
-        <span class="eyebrow">خدمة متوفرة بمدينة الداخلة</span>
-        <h1>خلي المتعة تبدأ مع <span>ألعاب PS4</span></h1>
-        <p class="lead">نثبتو ليك الألعاب اللي كتختار، بسرعة واهتمام، مع الحفاظ على بيانات جهازك. تواصل معنا واختار الألعاب والمساحة المناسبة ليك.</p>
-        <div class="hero-actions">
-          <a class="btn" href="https://wa.me/212777497771?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%AB%D8%A8%D8%AA%20%D8%A3%D9%84%D8%B9%D8%A7%D8%A8%20PS4">🎮 اطلب الخدمة الآن</a>
-          <a class="btn secondary" href="#features">اكتشف المميزات</a>
-        </div>
-        <div class="price-line">
-          <div class="price">50 <small>DH</small></div>
-          <div><div><strong>السعر الحالي للخدمة</strong></div><div class="old-price">بدل 80 DH</div></div>
-        </div>
-      </div>
-      <div class="poster-wrap">
-        <img class="poster" src="assets/ps4-service-ad.jpg" alt="إعلان خدمة تثبيت ألعاب PS4 من STORE DAKHLA">
-      </div>
-    </section>
+<div class="filters">
+ <input id="search" oninput="debounceRender()">
+ <label class="toolbar-group"><input type="checkbox" id="arOnly" onchange="render()" style="min-width:0"><span id="arLbl"></span></label>
+ <div class="toolbar-group lang-sw">
+  <button data-l="ar" onclick="setLang('ar')">AR</button>
+  <button data-l="fr" onclick="setLang('fr')">FR</button>
+  <button data-l="en" onclick="setLang('en')">EN</button>
+ </div>
+ <button id="printBtn" onclick="window.print()"></button>
+ <div class="chips" id="chips"></div>
+</div>
 
-    <section class="section" id="features">
-      <div class="container">
-        <div class="section-head"><h2>علاش تختار STORE DAKHLA؟</h2><p>خدمة ألعاب باهتمام ودعم بعد التثبيت</p></div>
-        <div class="features">
-          <article class="feature"><div class="ico">⚡</div><h3>تثبيت سريع</h3><p>نخدمو على تثبيت الألعاب في أقرب وقت ممكن حسب عدد الألعاب وحجمها.</p></article>
-          <article class="feature"><div class="ico">🛡️</div><h3>الحفاظ على بياناتك</h3><p>نحرصو على عدم حذف بيانات الجهاز أثناء عملية التثبيت.</p></article>
-          <article class="feature"><div class="ico">🎮</div><h3>اختيار الألعاب</h3><p>اختار الألعاب اللي بغيتي قبل ما نبداو عملية التثبيت.</p></article>
-          <article class="feature"><div class="ico">🔧</div><h3>دعم تقني</h3><p>تواصل معنا إذا احتجت مساعدة أو توضيح بعد الخدمة.</p></article>
-        </div>
-      </div>
-    </section>
+<div id="catalogue"></div>
+<footer id="siteFooter" class="site-footer"></footer>
+<div id="fb-root"></div>
+<section id="reviews" class="reviews"></section>
 
-    <section class="section" id="games">
-      <div class="container">
-        <div class="section-head"><h2>ألعاب تقدر تختار منها</h2><p>أمثلة من أشهر ألعاب PS4 — التوفر كيتأكد قبل التثبيت</p></div>
-        <div class="games">
-          <div class="game"><span class="number">01</span><div><strong>EA SPORTS FC 24</strong><small>رياضة وكرة القدم</small></div></div>
-          <div class="game"><span class="number">02</span><div><strong>Spider-Man 2</strong><small>أكشن ومغامرات</small></div></div>
-          <div class="game"><span class="number">03</span><div><strong>God of War Ragnarök</strong><small>مغامرات وقتال</small></div></div>
-          <div class="game"><span class="number">04</span><div><strong>The Last of Us Part II</strong><small>قصة وبقاء</small></div></div>
-          <div class="game"><span class="number">05</span><div><strong>Red Dead Redemption 2</strong><small>عالم مفتوح</small></div></div>
-          <div class="game"><span class="number">06</span><div><strong>Horizon Forbidden West</strong><small>مغامرات وعالم مفتوح</small></div></div>
-        </div>
-      </div>
-    </section>
+<div id="cartPanel" class="cart-panel" style="display:none"></div>
+<div id="floatingCart" class="floating-cart" style="display:none">
+ <span onclick="toggleCartPanel()" style="cursor:pointer"><span id="cartLabel"></span>: <b id="cartCount">0</b> ▾</span>
+ <button id="sendBtn" onclick="sendCartToWhatsApp()"></button>
+</div>
 
-    <section class="container section">
-      <div class="offer">
-        <div><h2>باغي تزيد ألعاب لجهازك؟</h2><p>راسلنا على واتساب، قول لينا نوع جهازك والألعاب اللي بغيتي.</p></div>
-        <a class="btn" href="https://wa.me/212777497771?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%B3%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%AA%D8%AB%D8%A8%D9%8A%D8%AA%20%D8%A3%D9%84%D8%B9%D8%A7%D8%A8%20PS4">تواصل معنا الآن ←</a>
-      </div>
-    </section>
-
-    <section class="section" id="faq">
-      <div class="container">
-        <div class="section-head"><h2>أسئلة كتهمك</h2><p>معلومات قبل طلب الخدمة</p></div>
-        <div class="faq">
-          <article class="faq-item"><h3>واش غادي تتمسح ليا بيانات الجهاز؟</h3><p>الخدمة مصممة باش نحافظو على بيانات الجهاز، وكنراجعو الحالة معاك قبل بداية العمل.</p></article>
-          <article class="faq-item"><h3>واش نقدر نختار الألعاب؟</h3><p>نعم، صيفط لينا لائحة الألعاب اللي بغيتي ونتأكدو من التوفر والمساحة المطلوبة.</p></article>
-          <article class="faq-item"><h3>فين كتتوفر الخدمة؟</h3><p>الخدمة متوفرة بمدينة الداخلة. تواصل معنا لتأكيد التفاصيل والموعد.</p></article>
-          <article class="faq-item"><h3>كيفاش نطلب الخدمة؟</h3><p>ضغط على زر واتساب، وصيفط لينا نوع جهازك والألعاب اللي بغيتي تثبت.</p></article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer><div class="container"><strong>STORE DAKHLA</strong><br>خدمات وألعاب PlayStation في الداخلة<br><small>© 2026 STORE DAKHLA — جميع الحقوق محفوظة</small></div></footer>
-  <a class="float-wa" href="https://wa.me/212777497771?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D8%A8%D8%BA%D9%8A%D8%AA%20%D9%86%D8%B3%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A9" aria-label="تواصل معنا عبر واتساب">WhatsApp ☎</a>
+<script src="Scripte.js"></script>
+<script src="app.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "2b857f32f0e64bb49c9bb074ff335169"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
